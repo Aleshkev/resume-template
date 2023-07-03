@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Alegreya+Sans+SC:wght@400;700&family=Alegreya+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@page {
+  size: a4;
+  margin: 0;
+}
+
+h1 {
+  @apply text-[28pt] font-[900] font-sans;
+}
+h1 + p {
+  @apply text-slate-600;
+}
+
+h2 {
+  @apply text-pink-600 uppercase font-sans-sc font-bold mt-[14pt] [&+h3]:mt-0 [&+h4]:mt-0;
+}
+h3 {
+  @apply text-[13pt] leading-tight mt-[10pt] [&+h4]:-mt-[1.5pt];
+}
+h4 {
+  @apply lowercase font-sans-sc mt-[10pt];
+}
+
+a {
+  @apply text-pink-800;
+}
