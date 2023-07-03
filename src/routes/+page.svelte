@@ -6,7 +6,7 @@
 	import Contact from './Contact.svelte';
 	import Skills from './Skills.svelte';
 
-  let data = data1 ? data1 : data2;
+  let data = data1 && process.env.NODE_ENV !== 'production' ? data1 : data2;
 </script>
 
 <div class="text-[10pt]">
