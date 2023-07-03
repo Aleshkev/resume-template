@@ -20,8 +20,13 @@ def rep_word(s: str):
         z = z.upper()
     return z[:len(s)]
 
+def rep_num(s: str):
+    return re.sub(r".", lambda m: random.choice("0123456789"), s)
+
 def rep(s: str):
-    return re.sub(r"\p{L}+", lambda m: rep_word(m.group(0)), s)
+    s = re.sub(r"\p{L}+", lambda m: rep_word(m.group(0)), s)
+    s = re.sub(r"[0-9]+", lambda m: rep_num(m.group(0)), s)
+    return s
 
 def walk(x):
     if isinstance(x, str):
