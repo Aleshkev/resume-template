@@ -3,7 +3,7 @@
 
 Using Svelte and Tailwind. Designed to be printed to a PDF file.
 
-![](demo.jpg)
+[![](demo.jpg)](https://aleshkev.github.io/resume-template/)
 
 
 ## Developing
